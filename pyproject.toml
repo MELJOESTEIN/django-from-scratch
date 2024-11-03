@@ -15,3 +15,23 @@ requires-python = ">= 3.8"
 managed = true
 virtual = true
 dev-dependencies = []
+
+[tool.rye.scripts]
+# Replace default runserver command
+server = "python manage.py runserver"
+
+# Simplify migrate command
+migrate = "python manage.py migrate"
+
+# Custom command for creating a superuser
+superuser = "python manage.py createsuperuser"
+
+# Command for starting a new app
+startapp = "python manage.py startapp"
+
+# Command to create a new Django project
+project = "django-admin startproject core ."
+
+
+# Other useful Django commands
+makemigrations = "python manage.py makemigrations"
